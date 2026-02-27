@@ -1,0 +1,378 @@
+{
+  "info": {
+    "_postman_id": "2b726794-975c-4ecb-847f-05468fff077e",
+    "name": "DevSu",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "1501550"
+  },
+  "item": [
+    {
+      "name": "ms-clientes",
+      "item": [
+        {
+          "name": "Buscar",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9081/clientes/CLIN02",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9081",
+              "path": [
+                "clientes",
+                "CLIN02"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Registrar",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Juan Pérez O\",\n    \"genero\": \"M\",\n    \"edad\": 31,\n    \"tipoDocumento\": \"CC\",\n    \"identificacion\": \"1234567813\",\n    \"direccion\": \"Av. Principal 1234\",\n    \"idCliente\": \"PRU4\",\n    \"telefono\": \"0991234568\",\n    \"contrasena\": \"password1234\",\n    \"estado\": true\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9081/clientes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9081",
+              "path": [
+                "clientes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Borrar",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9081/clientes/CLIN02",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9081",
+              "path": [
+                "clientes",
+                "CLIN02"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Juan Pérez O\",\n    \"genero\": \"M\",\n    \"edad\": 30,\n    \"tipoDocumento\": \"CC\",\n    \"identificacion\": \"123456717\",\n    \"direccion\": \"Av. Principal 123\",\n    \"idCliente\": \"CLIN02\",\n    \"telefono\": \"099123456\",\n    \"contrasena\": \"password123\",\n    \"estado\": true\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9081/clientes/CLIN02",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9081",
+              "path": [
+                "clientes",
+                "CLIN02"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar todos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9081/clientes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9081",
+              "path": [
+                "clientes"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "ms-cuentas",
+      "item": [
+        {
+          "name": "Movimientos",
+          "item": [
+            {
+              "name": "Buscar todos",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:9082/movimientos",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "9082",
+                  "path": [
+                    "movimientos"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Buscar por numero de cuenta",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:9082/movimientos/1234567814",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "9082",
+                  "path": [
+                    "movimientos",
+                    "1234567814"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Crear movimiento",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"valor\": -1200.00,\n    \"numeroCuenta\": \"1234567814\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:9082/movimientos",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "9082",
+                  "path": [
+                    "movimientos"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Cuenta",
+          "item": [
+            {
+              "name": "Buscar todos",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:9082/cuentas",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "9082",
+                  "path": [
+                    "cuentas"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Buscar por numero cuenta",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:9082/cuentas/1234567814",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "9082",
+                  "path": [
+                    "cuentas",
+                    "1234567814"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Crear cuenta",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"numeroCuenta\": \"1234567814\",\n    \"tipoCuenta\": \"AHORROS\",\n    \"saldoInicial\": 0.00,\n    \"estado\": true,\n    \"clienteId\": \"PRU4\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:9082/cuentas",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "9082",
+                  "path": [
+                    "cuentas"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Actualizar cuenta",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"numeroCuenta\": \"1234567814\",\n    \"tipoCuenta\": \"AHORROS\",\n    \"saldoInicial\": 1300.00,\n    \"estado\": true,\n    \"clienteId\": \"PRU3\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:9082/cuentas/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "9082",
+                  "path": [
+                    "cuentas",
+                    "1"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Reporte",
+          "item": [
+            {
+              "name": "Estado de cuenta",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:9082/reportes?fechaInicio=2026-02-26&fechaFin=2026-02-26&clienteId=PRU3",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "9082",
+                  "path": [
+                    "reportes"
+                  ],
+                  "query": [
+                    {
+                      "key": "fechaInicio",
+                      "value": "2026-02-26"
+                    },
+                    {
+                      "key": "fechaFin",
+                      "value": "2026-02-26"
+                    },
+                    {
+                      "key": "clienteId",
+                      "value": "PRU3"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
