@@ -1,6 +1,6 @@
 ## Requisitos
 
-* Java 21
+* Java 17
 * Maven 3.9.0
 * Postman
 * Docker compose
@@ -10,3 +10,4 @@
 En la raiz del proyecto ejecutar:
 * docker-compose build --no-cache
 * docker-compose up -d
+
